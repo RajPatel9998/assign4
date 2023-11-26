@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Invoice</title>
+</head>
+<body>
+  <h2>Insert a New Invoice</h2>
+  <form method="post" action="/invoices">
+    <!-- Add form fields for the new invoice here -->
+    <label for="InvoiceID">Invoice ID:</label>
+    <input type="text" name="InvoiceID" required>
+    <br>
+    <label for="Branch">Branch:</label>
+    <input type="text" name="Branch" required>
+<br>
+    <label for="City">City:</label>
+    <input type="text" name="City" required>
+<br>
+    <label for="Customertype">Customer Type:</label>
+    <input type="text" name="Customertype"  required>
+<br>
+    <label for="Productline">Product Line:</label>
+    <input type="text" name="Productline"  required>
+<br>
+    <label for="name">Product Name:</label>
+    <input type="text" name="name"  required>
+<br>
+    <label for="image">Image URL:</label>
+    <input type="text" name="image" required>
+<br>
+    <label for="Unitprice">Unit Price:</label>
+    <input type="number" name="Unitprice" required>
+<br>
+    <label for="Quantity">Quantity:</label>
+    <input type="number" name="Quantity" required>
+<br>
+    <label for="Tax5">Tax 5%:</label>
+    <input type="number" name="Tax5" required>
+<br>
+    <label for="Total">Total:</label>
+    <input type="number" name="Total"  required>
+<br>
+    <label for="Date">Date:</label>
+    <input type="text" name="Date"  required>
+<br>
+    <label for="Time">Time:</label>
+    <input type="text" name="Time"  required>
+<br>
+    <label for="Payment">Payment Method:</label>
+    <input type="text" name="Payment" required>
+<br>
+    <label for="cogs">COGS:</label>
+    <input type="number" name="cogs"  required>
+<br>
+    <label for="grossincome">Gross Income:</label>
+    <input type="number" name="grossincome"  required>
+<br>
+    <label for="Rating">Rating:</label>
+    <input type="number" name="Rating" required>
+<br>
+    <button type="submit">Insert Invoice</button>
+  </form>
+</body>
+</html>

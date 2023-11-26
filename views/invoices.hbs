@@ -1,0 +1,64 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Invoices</title>
+</head>
+<body>
+  <h1>All Invoices</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Invoice ID</th>
+        <th>Branch</th>
+        <th>City</th>
+        <th>Customer Type</th>
+        <th>Product Line</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th>Tax 5%</th>
+        <th>Total</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Payment</th>
+        <th>COGS</th>
+        <th>Gross Income</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each invoices}}
+        <tr>
+          <td>{{this.InvoiceID}}</td>
+          <td>{{this.Branch}}</td>
+          <td>{{this.City}}</td>
+          <td>{{this.Customertype}}</td>
+          <td>{{this.Productline}}</td>
+          <td>{{this.name}}</td>
+          <td><img src="{{this.image}}" alt="{{this.name}}" width="50" height="50"></td>
+          <td>{{this.Unitprice}}</td>
+          <td>{{this.Quantity}}</td>
+          <td>{{this.Tax5}}</td>
+          <td>{{this.Total}}</td>
+          <td>{{formatDate this.Date}}</td>
+          <td>{{this.Time}}</td>
+          <td>{{this.Payment}}</td>
+          <td>{{this.cogs}}</td>
+          <td>{{this.grossincome}}</td>
+          <td>{{this.Rating}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <!-- Add this section to display statistics -->
+<div>
+    <h2>Statistics</h2>
+    <p>Total Revenue: {{statistics.totalRevenue}}</p>
+    <p>Average Rating: {{statistics.averageRating}}</p>
+</div>
+
+</body>
+</html>
